@@ -5,27 +5,69 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stop Watch</title>
+    
 
     <!-- Link Of Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-</head>
-<body>
+    <link rel="stylesheet" href="Css/style.css">
 
+    <style>
+        body{
+            background-image: url("underWater.jpg");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 1600px 1200px;
+        }
+
+        .bg-color{
+            background-color:darkturquoise;
+        }
+        .btn-color{
+            background-color: orangered;
+        }
+    </style>
+
+
+</head>
+<body class="bg-img">
+
+    <!-- Header Bar -->
     <header class="mx-5 px-5">
-        <h1 class="text-center mt-4 mx-5 shadow-sm p-3 mb-5 bg-body-tertiary bg-danger-subtle rounded"> <span class="text-danger">Stop</span> <span class="text-success">Watch</span> </h1>
+        <h1 class="text-center p-3 mb-5 "> <span class="text-danger  fw-bold">Stop</span> <span class="text-warning fw-bold">Watch</span> </h1>
     </header>
 
-    <section class="d-flex justify-content-center " id="rand-color">
-        <div class="card border-primary mb-3" style="max-width: 18rem;">
-            <div class="card border-warning p-2 mb-3" style="max-width: 18rem;">
-                <div class="card-header text-center bg-warning-subtle">Time in Second</div>
-                <div class="card-body">
-                  <h5 class="card-title">Warning card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                
-              </div>
-        </div>
-    </section>
+    
+    <main>
+
+        <!-- Card to Display time in Second -->
+        <section class="d-flex justify-content-center "  >
+            <div class="card border-primary mb-3" style="max-width: 18rem;" id="color-field" >
+                <div class="card border-warning p-2 mb-3" style="max-width: 18rem;" >
+                    <div class="card-header text-center bg-color  px-5">Time in Second</div>
+                    <img src="images/clock.jpg" alt="" class="mx-5">
+                    <div class="card-body">
+                      <h1 class="display-time text-center" id="time"></h1>
+                  </div>
+            </div>
+        </section>
+
+
+        <!-- Buttons -->
+
+        <section class="mt-4 text-center">
+            <button class="btn btn-success border-danger px-5 py-2 fs-4" id="start">Start</button>
+            <div class=" d-flex justify-content-evenly">
+                <button class="btn btn-danger px-5 py-2 fs-4" id="stop">Stop</button>
+                <button class="btn btn-warning px-5 py-2 fs-4" id="reset">Reset</button>
+            </div>
+            
+        </section>
+
+    </main>
+
+    
+
+
     
 
  
