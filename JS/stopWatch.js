@@ -19,13 +19,28 @@ document.getElementById('start').addEventListener('click', function(){
   }
 
   let timeTracker=0;
+  let sec = 0;
+  let min = 0;
 
 const wannaStop = setInterval(()=>{
+  
     timeTracker++;
     displayTime.innerText = '';
     const insideCard = timeTracker;
-    displayTime.innerText = insideCard;
-    changeColor();
+    displayTime.innerText = min+'m '+sec+'s '+insideCard+"ms";
+   
+    if(timeTracker===235)
+    {
+      sec++;
+      timeTracker = 0;
+      changeColor();
+    }
+
+    if(sec==60)
+    {
+      sec=0;
+      min++;
+    }
     
     document.getElementById('stop').addEventListener('click',function(){
       clearInterval(wannaStop);
@@ -38,7 +53,7 @@ const wannaStop = setInterval(()=>{
     });
 
 
-},1000)
+},1)
   
    //const id  = setInterval(changeColor,1000);
 
